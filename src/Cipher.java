@@ -12,10 +12,8 @@ public class Cipher {
             'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ъ', 'Ы', 'Ь', 'Э',
             'Ю', 'Я', '.', ',', '«', '»', '"', '\'', ':', '!', '?', ' '};
 
-
     public static String crypt(String text, int key) {
         StringBuilder sb = new StringBuilder();
-
 
         if (key > ALPHABET_RU.length) {
             key %= ALPHABET_RU.length;
@@ -34,10 +32,6 @@ public class Cipher {
                     } else {
                         sb.append(ALPHABET_RU[(j + key) % ALPHABET_RU.length]);
                     }
-
-                } else if (text.charAt(i) == new Character(text.charAt(i))){
-
-
                 }
             }
         }
